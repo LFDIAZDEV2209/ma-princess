@@ -211,9 +211,8 @@ function MusicPlayer() {
         loop
         src="/quedate.mp3"
         preload="metadata"
-        onError={(e) => {
-          const audio = e.currentTarget
-          // Si no encuentra el archivo local, intenta con un enlace alternativo
+        onError={() => {
+          // Si no encuentra el archivo local, muestra un warning
           // Nota: Descarga "Quedate" de Beéle y guárdalo como "quedate.mp3" en la carpeta public/
           console.warn(
             'No se encontró quedate.mp3 en public/. Por favor, descarga la canción y guárdala como public/quedate.mp3'
